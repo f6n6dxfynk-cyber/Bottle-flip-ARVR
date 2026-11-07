@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-31",
+  "app": "Demo/BottleFlipVR.app",
+  "method": "Native UI keyboard and mouse smoke check",
+  "checks": [
+    {
+      "action": "Space key flip",
+      "observed": "score 100, platform 2/4",
+      "passed": true
+    },
+    {
+      "action": "Mouse click outside HUD",
+      "observed": "score 200, platform 3/4",
+      "passed": true
+    },
+    {
+      "action": "Space key flip",
+      "observed": "score 300, course complete",
+      "passed": true
+    },
+    {
+      "action": "R key replay",
+      "observed": "score 0, platform 1/4, Ready",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+BOTTLE FLIP IN VR
+Desktop project package — 31 October 2026
+
+1. PLAY
+Open Demo/BottleFlipVR.app.
+Tap and release Space, or click outside the instruction panel.
+Wait for Ready between throws. Three landings finish the course.
+Press R or Replay to start again. Easy assistance is enabled.
+
+2. PRESENT
+Open Presentation/BottleFlipVR_10_Minute_Presentation.pptx in PowerPoint.
+Start Slide Show. The 35-second video on slide 7 plays automatically.
+Speaker notes contain a ten-minute schedule and speaking prompts.
+The technical revision covers launch equations, collider settings, landing checks,
+component events, state guards, replay handling and the tested input ranges.
+The slides use the charcoal, lime and blue theme from the supplied references.
+Helvetica Neue was chosen to match the reference's clean sans-serif lettering.
+The exact font cannot be identified reliably from the screenshots alone.
+The standalone app is the interactive demo; the embedded video is a recording.
+Keep Demo and Presentation together for the live-demo link.
+For a longer live attempt, switch to the app after the ten-minute talk.
+
+3. READ
+Report/BottleFlipVR_Project_Report.pdf is the 22-page ready-to-read report.
+The DOCX beside it is editable. It includes a 20-paper comparison and sources.
+Harsh, Rudra and Swayam receive an equal one-third contribution allocation.
+
+4. EDIT IN UNITY
+Add/open UnityProject/BottleFlipVR in Unity Hub using Unity 6000.5.7f1.
+Hub launches Unity Editor. Then open Assets/Scenes/BottleFlipVR.unity.
+Press Play to simulate. Stop Play before editing and saving.
+Select Bottle to adjust assistance and timing in the Inspector.
+Select platforms to move or resize them. Test the complete course after changes.
+Use File > Build Profiles, or Bottle Flip > Build macOS Demo, to rebuild.
+The project is complete and editable; it is not a loose script.
+
+VALIDATION
+48/48 automated checks passed on the Apple M3 Mac: 30 landings, 10 complete
+courses, initial readiness and 7 completion/replay/recovery edge checks.
+Manual keyboard and mouse play also reached 300 points and replay reset to 0.
+The packaged Unity scene imported and validated with four platforms.
+See Evidence/verification.json and manual-checks.json for details.
+These results cover the default desktop scene. Headset interaction is future work.

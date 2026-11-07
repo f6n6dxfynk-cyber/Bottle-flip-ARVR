@@ -1,0 +1,247 @@
+{
+    "unityVersion": "6000.5.7f1",
+    "platform": "Mac OS X 26.5.1 / Apple M3",
+    "utc": "2026-10-31T06:28:09.0330900Z",
+    "checks": [
+        {
+            "name": "Initial state",
+            "passed": true,
+            "observed": "Score=0, platform=0"
+        },
+        {
+            "name": "Course 1 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=0"
+        },
+        {
+            "name": "Course 1 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=0.18"
+        },
+        {
+            "name": "Course 1 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=0.75"
+        },
+        {
+            "name": "Course 1 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 2 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=0.18"
+        },
+        {
+            "name": "Course 2 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=0.75"
+        },
+        {
+            "name": "Course 2 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=1.35"
+        },
+        {
+            "name": "Course 2 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 3 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=0.75"
+        },
+        {
+            "name": "Course 3 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=1.35"
+        },
+        {
+            "name": "Course 3 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=4"
+        },
+        {
+            "name": "Course 3 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 4 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=1.35"
+        },
+        {
+            "name": "Course 4 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=4"
+        },
+        {
+            "name": "Course 4 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=0"
+        },
+        {
+            "name": "Course 4 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 5 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=4"
+        },
+        {
+            "name": "Course 5 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=0"
+        },
+        {
+            "name": "Course 5 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=0.18"
+        },
+        {
+            "name": "Course 5 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 6 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=0"
+        },
+        {
+            "name": "Course 6 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=0.18"
+        },
+        {
+            "name": "Course 6 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=0.75"
+        },
+        {
+            "name": "Course 6 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 7 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=0.18"
+        },
+        {
+            "name": "Course 7 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=0.75"
+        },
+        {
+            "name": "Course 7 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=1.35"
+        },
+        {
+            "name": "Course 7 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 8 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=0.75"
+        },
+        {
+            "name": "Course 8 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=1.35"
+        },
+        {
+            "name": "Course 8 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=4"
+        },
+        {
+            "name": "Course 8 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 9 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=1.35"
+        },
+        {
+            "name": "Course 9 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=4"
+        },
+        {
+            "name": "Course 9 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=0"
+        },
+        {
+            "name": "Course 9 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Course 10 landing 1",
+            "passed": true,
+            "observed": "Score=100, platform=1, hold=4"
+        },
+        {
+            "name": "Course 10 landing 2",
+            "passed": true,
+            "observed": "Score=200, platform=2, hold=0"
+        },
+        {
+            "name": "Course 10 landing 3",
+            "passed": true,
+            "observed": "Score=300, platform=3, hold=0.18"
+        },
+        {
+            "name": "Course 10 completion",
+            "passed": true,
+            "observed": "Complete=True, attempts=3"
+        },
+        {
+            "name": "Launch after completion is ignored",
+            "passed": true,
+            "observed": "Score=300, attempts=3"
+        },
+        {
+            "name": "Replay clears progress",
+            "passed": true,
+            "observed": "Score=0, attempts=0"
+        },
+        {
+            "name": "Repeated launch calls count once",
+            "passed": true,
+            "observed": "Score=100, attempts=1"
+        },
+        {
+            "name": "Replay during flight cancels old outcome",
+            "passed": true,
+            "observed": "Score=0, attempts=0"
+        },
+        {
+            "name": "Miss retains checkpoint and score",
+            "passed": true,
+            "observed": "Score=100, platform=1, attempts=2"
+        },
+        {
+            "name": "Successful retry advances",
+            "passed": true,
+            "observed": "Score=200, platform=2"
+        },
+        {
+            "name": "Off-course timeout returns to start",
+            "passed": true,
+            "observed": "Score=0, attempts=1"
+        }
+    ]
+}

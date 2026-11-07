@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-31",
+  "deck": "Presentation/BottleFlipVR_10_Minute_Presentation.pptx",
+  "slide_count": 12,
+  "speaking_schedule_seconds": 600,
+  "video_duration_seconds": 35,
+  "structural_validation": "passed",
+  "layout_validation": "passed",
+  "slides_rendered_and_reviewed": 12,
+  "native_powerpoint_open": "passed, no repair warning",
+  "native_video_playback": "passed, automatic playback of actual gameplay observed in the revised deck",
+  "live_demo_link": "Previously tested launch. Exact original slide 7 hyperlink preserved and target app verified present.",
+  "powerpoint_screenshot": "10_technical_ppt_demo.png",
+  "sha256": "bd2586406a7af1e4e060c914f7af109092dbece1ae116c761f2a9bc5bdd54313",
+  "revision": "Technical expansion, 31 October 2026",
+  "technical_content_verified_against": [
+    "UnityProject/BottleFlipVR/Assets/Scripts/BottleFlipController.cs",
+    "UnityProject/BottleFlipVR/Assets/Scripts/BottleFlipGameManager.cs",
+    "UnityProject/BottleFlipVR/Assets/Scenes/BottleFlipVR.unity",
+    "Evidence/verification.json"
+  ]
+}

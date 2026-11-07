@@ -1,0 +1,80 @@
+Mono path[0] = '/Users/rudrapancholi/Downloads/BottleFlipVR_Final/Demo/BottleFlipVR.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/rudrapancholi/Downloads/BottleFlipVR_Final/Demo/BottleFlipVR.app/Contents/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.5.7f1 (017862109af0)
+[Subsystems] Discovering subsystems at path /Users/rudrapancholi/Downloads/BottleFlipVR_Final/Demo/BottleFlipVR.app/Contents/Resources/Data/UnitySubsystems
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.026 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+UnloadTime: 1.483208 ms
+Initial state: True Score=0, platform=0
+Course 1 landing 1: True Score=100, platform=1, hold=0
+Course 1 landing 2: True Score=200, platform=2, hold=0.18
+Course 1 landing 3: True Score=300, platform=3, hold=0.75
+Course 1 completion: True Complete=True, attempts=3
+Course 2 landing 1: True Score=100, platform=1, hold=0.18
+Course 2 landing 2: True Score=200, platform=2, hold=0.75
+Course 2 landing 3: True Score=300, platform=3, hold=1.35
+Course 2 completion: True Complete=True, attempts=3
+Course 3 landing 1: True Score=100, platform=1, hold=0.75
+Course 3 landing 2: True Score=200, platform=2, hold=1.35
+Course 3 landing 3: True Score=300, platform=3, hold=4
+Course 3 completion: True Complete=True, attempts=3
+Course 4 landing 1: True Score=100, platform=1, hold=1.35
+Course 4 landing 2: True Score=200, platform=2, hold=4
+Course 4 landing 3: True Score=300, platform=3, hold=0
+Course 4 completion: True Complete=True, attempts=3
+Course 5 landing 1: True Score=100, platform=1, hold=4
+Course 5 landing 2: True Score=200, platform=2, hold=0
+Course 5 landing 3: True Score=300, platform=3, hold=0.18
+Course 5 completion: True Complete=True, attempts=3
+Course 6 landing 1: True Score=100, platform=1, hold=0
+Course 6 landing 2: True Score=200, platform=2, hold=0.18
+Course 6 landing 3: True Score=300, platform=3, hold=0.75
+Course 6 completion: True Complete=True, attempts=3
+Course 7 landing 1: True Score=100, platform=1, hold=0.18
+Course 7 landing 2: True Score=200, platform=2, hold=0.75
+Course 7 landing 3: True Score=300, platform=3, hold=1.35
+Course 7 completion: True Complete=True, attempts=3
+Course 8 landing 1: True Score=100, platform=1, hold=0.75
+Course 8 landing 2: True Score=200, platform=2, hold=1.35
+Course 8 landing 3: True Score=300, platform=3, hold=4
+Course 8 completion: True Complete=True, attempts=3
+Course 9 landing 1: True Score=100, platform=1, hold=1.35
+Course 9 landing 2: True Score=200, platform=2, hold=4
+Course 9 landing 3: True Score=300, platform=3, hold=0
+Course 9 completion: True Complete=True, attempts=3
+Course 10 landing 1: True Score=100, platform=1, hold=4
+Course 10 landing 2: True Score=200, platform=2, hold=0
+Course 10 landing 3: True Score=300, platform=3, hold=0.18
+Course 10 completion: True Complete=True, attempts=3
+Launch after completion is ignored: True Score=300, attempts=3
+Replay clears progress: True Score=0, attempts=0
+Repeated launch calls count once: True Score=100, attempts=1
+Replay during flight cancels old outcome: True Score=0, attempts=0
+Miss retains checkpoint and score: True Score=100, platform=1, attempts=2
+Successful retry advances: True Score=200, platform=2
+Off-course timeout returns to start: True Score=0, attempts=1
+BOTTLEFLIP_VERIFICATION 48 checks; passed=True
+Thread 0x170e4b000 may have been prematurely finalized
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x16fbf3000 may have been prematurely finalized
+CodeReloadManager destroyed

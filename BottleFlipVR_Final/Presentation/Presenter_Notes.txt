@@ -1,0 +1,67 @@
+BOTTLE FLIP IN VR
+10-minute technical presentation
+
+SLIDE 1   0:00–0:30   30 seconds
+Bottle Flip in VR
+
+Our project is Bottle Flip in VR, created for MTE4442 by Harsh Gajera, Rudra Pancholi and Swayam Samel. This presentation demonstrates the desktop version and explains the implementation behind an easy bottle flip. We will cover the Unity components, launch equations, collision checks and recovery logic, then review the software test evidence. The game and complete editable Unity project accompany the report.
+
+SLIDE 2   0:30–1:10   40 seconds
+Desktop runtime
+
+The project uses Unity 6000.5.7f1 with C# scripts, the Built-in renderer and a Rigidbody driven by the 3D physics system. A CapsuleCollider approximates the bottle shape. The HUD uses IMGUI to show score, platform and game state. Space and mouse release both call the same launch method, while R restarts the course. Four platforms create three scoring transfers. Each landing earns one hundred points, so completion gives three hundred. Everything runs locally in the supplied Mac application. There is no account system, remote database or server dependency.
+
+SLIDE 3   1:10–2:05   55 seconds
+Physics setup
+
+The bottle has a Rigidbody mass of zero point four five kilograms. Its centre of mass is shifted down by zero point one eight local units. The CapsuleCollider has height one point five and radius zero point three before transform scaling. ContinuousDynamic collision detection helps the moving bottle register contact, and interpolation smooths its displayed motion between physics updates. The body stays kinematic while ready and becomes dynamic at launch. During an assisted flight, both damping values are zero so they do not introduce an unmodelled drag term into the ballistic calculation. The controller restores the original damping after the outcome or a replay. The visible water is a decorative mesh. This is a simplified rigid body, with no simulation of liquid redistribution or sloshing.
+
+SLIDE 4   2:05–2:40   35 seconds
+Research informed three decisions
+
+The report compares twenty selected research papers. Real water moves inside a bottle, so we identify our fixed rigid-body model as an arcade approximation. Feedback studies motivate clear score changes and immediate responses. Education studies also show why functioning software does not by itself prove better learning. Our evidence therefore covers software behaviour. We have not conducted a learning study or measured headset comfort. These research findings guide design choices rather than establish benefits of this particular game.
+
+SLIDE 5   2:40–3:40   60 seconds
+Component architecture
+
+The controller owns input, launch motion and collision interpretation. Keyboard and mouse release call Launch with hold duration and optional drag. It sets Rigidbody velocity and spin, then Unity advances the flight. Both OnCollisionEnter and OnCollisionStay call InspectContact, so an existing contact can still qualify. After the controller resolves the result, it publishes the C# OutcomeResolved event. BottleFlipGameManager subscribes to that event in Start and unsubscribes in OnDestroy. Its HandleOutcome method increments attempts once per resolved result. A Land result adds one hundred points and advances the platform index. The controller guards against repeated resolution, while the manager keeps score and course progression separate from physics. The HUD and locally generated sounds communicate the outcome.
+
+SLIDE 6   3:40–5:00   80 seconds
+Ballistic launch
+
+This is the calculation used by assisted aim with easy landing enabled. Delta p is the vector from the current Rigidbody position to the target spawn position, which includes the bottle base offset above the platform. Starting from displacement equals initial velocity times time plus one half gravity times time squared, rearranging gives v zero equals delta p divided by T minus one half g T. Velocity is in units per second, and the gravity vector comes from Physics.gravity. The world X angular velocity is two pi divided by T radians per second, giving approximately one full turn over the planned duration. The hold value is in seconds. InverseLerp clamps the normalized charge c between zero and one, using zero point one eight and one point three five seconds as limits. Flight duration is one point one two plus zero point zero eight times c, so even a long hold remains within one point one two to one point two seconds. Easy mode ignores mouse drag. The calculation sets initial conditions for PhysX. Collision timing and the settle assistance determine the actual final pose, rather than an exact timer guaranteeing a physical landing.
+
+SLIDE 7   5:00–6:00   60 seconds
+Working demo
+
+Before playback: This is a thirty-five-second capture of the actual Unity game. Scheduled inputs use the same launch method as the player controls. Watch the score increase, the course finish, and replay start a second run.
+
+[The video starts automatically in slideshow mode. Allow all 35 seconds to play. Keep narration brief while it runs.]
+
+After playback: The separate Mac app is also included for live keyboard and mouse interaction.
+
+SLIDE 8   6:00–7:10   70 seconds
+Landing validation
+
+InspectContact first rejects callbacks when the bottle is not launched or is already resolving. Ground or Hazard contact immediately resolves a miss. For a successful landing, the collided object must be exactly the configured targetSurface, so another platform or wall cannot award points. At least one contact must have an upward normal greater than zero point five and a height within zero point zero eight units of the target top. The controller then starts SettleOnTarget. It marks resolving true, clears linear and angular velocity, and makes the Rigidbody kinematic. During fixed updates it applies a SmoothStep blend over zero point one eight seconds. Vector3.Lerp moves the bottle to the centre spawn position and Quaternion.Slerp rotates it toward the upright identity rotation. Only after this coroutine completes does Resolve publish Land. The next platform becomes ready after zero point six seconds. In Unity, selecting Bottle exposes Assisted Aim, Easy Landing, flight time and assist duration in the Inspector. Stop Play before saving a parameter change and retest the course afterward.
+
+SLIDE 9   7:10–8:15   65 seconds
+Validation results
+
+All forty-eight selected checks passed on the Apple M3 Mac in the default easy mode. The breakdown is one initial readiness check, thirty landing checks across ten courses, ten completion checks and seven edge cases. The completion assertions require three hundred points and three attempts. Hold values included zero, zero point one eight, zero point seven five, one point three five and four seconds. Synthetic drag varied up to plus and minus three hundred. The edge cases check launch after completion, replay reset, duplicate launch, replay during flight, preservation of the checkpoint after a miss, a successful retry and timeout recovery. For replay during flight, the important assertion is that an old pending outcome cannot alter the restarted course. Manual keyboard and mouse checks also completed the course and reset the score. These results cover the supplied scene and tested easy settings. They do not establish performance on every edited scene, manual difficulty setting or headset.
+
+SLIDE 10   8:15–9:15   60 seconds
+State and replay
+
+These are logical states implemented with boolean flags, not an enum-based state machine. CanLaunch requires ready and hasTarget, while launched and resolving must both be false. The guard rejects a second launch during flight or settlement. On a result, the controller freezes the body and publishes a single outcome. The manager retains the checkpoint after a miss and prepares a retry after zero point eight seconds. A flight that has not begun resolving after four seconds becomes a miss. Replay stops the manager coroutines and the controller reset stops its own coroutines, preventing an old delayed advance or landing from changing the new run. It clears motion, score, attempts and platform index before placing the bottle on the start platform. Completing the last transfer calls ClearTarget, so another launch is blocked until replay. This explains why reset behaviour matters as much as the successful throw.
+
+SLIDE 11   9:15–9:40   25 seconds
+Equal contribution across the team
+
+The submission allocates one third of the contribution credit to each member. Harsh covers scene and assets, Rudra covers interaction and game logic, and Swayam covers research and validation. Integration, testing and rehearsal are shared. Each member should be able to explain the full throw and recovery cycle.
+
+SLIDE 12   9:40–10:00   20 seconds
+A complete desktop play loop
+
+The result is a complete desktop play loop with assisted landings, scoring, replay and an editable Unity project. The next stage is a tracked XR rig, grab and release input, and real headset testing. Questions follow the ten-minute presentation.
+

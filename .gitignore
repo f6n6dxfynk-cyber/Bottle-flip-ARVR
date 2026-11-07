@@ -1,0 +1,10 @@
+# Local metadata and generated Unity folders
+.DS_Store
+**/.build/
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+~$*
+# Preserve the explicitly included playable builds.
